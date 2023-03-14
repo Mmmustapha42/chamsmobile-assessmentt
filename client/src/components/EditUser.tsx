@@ -4,9 +4,9 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Header } from './Header'
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect,  } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
-import {  getSingleUserAsync, updateUserAsync } from "../features/slice";
+import {   updateUserAsync } from "../features/slice";
 import { RootState } from "../reduxState/Store";
 
 const Form = () => {
@@ -29,7 +29,7 @@ const Form = () => {
 
   const handleFormSubmit = (values:any, actions:any) => {
     dispatch(updateUserAsync(values, id)as any)
-    //navigate('/')
+    navigate('/')
     
   };
 

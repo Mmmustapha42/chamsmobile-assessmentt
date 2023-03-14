@@ -32,9 +32,9 @@ const handleSettings = ()=>{
 }
 }
   return (
-    <Box bgcolor='aqua' display='flex' justifyContent='space-between' p={2} sx={{position:'sticky', top:'0'}}>
+    <Box bgcolor='#60bb49' display='flex' justifyContent='space-between' p={2} sx={{position:'sticky', top:'0'}}>
       
-      <Box display='flex' bgcolor='#727681' borderRadius='3px' position='sticky' top='0'>
+      <Box display='flex' bgcolor='#fff' borderRadius='3px' position='sticky' top='0'>
         <InputBase sx={{ml:2, flex:1}} placeholder='Search'/>
         <IconButton type='button' sx={{p:1}}>
           <SearchIcon/>

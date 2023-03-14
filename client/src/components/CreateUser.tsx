@@ -114,7 +114,7 @@ const Form = () => {
           </form>
         )}
       </Formik>
-      <Button variant="contained" sx={{mr:'5px', width:'100%', mt:'12px'}} onClick={()=>navigate('/')} color='success'>Back</Button>
+      <Button variant="contained" sx={{ml:'40%', width:'20%',right:'0', mt:'12px'}} onClick={()=>navigate('/')} color='success'>Back</Button>
 
     </Box>
   );
