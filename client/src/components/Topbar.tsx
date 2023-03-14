@@ -18,6 +18,9 @@ export const Topbar = () => {
   const [toggle, setToggle] = useState(true)
 
 
+  const handleMode = ()=>{
+    console.log("collected")
+  }
  
   const handleNote = ()=>{
     if(window.confirm('You don`t have any notifications')){
@@ -39,7 +42,7 @@ const handleSettings = ()=>{
         </IconButton>
       </Box>
       <Box display='flex'>
-      <IconButton onClick={()=>{}} >
+      <IconButton onClick={()=>handleMode()} >
         {true ? <DarkModeOutlinedIcon/> : <LightModeOutlinedIcon/>}
       </IconButton>
         <IconButton onClick={handleNote}> <NotificationsOutlinedIcon/></IconButton>
