@@ -29,7 +29,7 @@ export const userSlice = createSlice({
             state = {...state}
         },
         addUser:(state:UserState, action:PayloadAction<User[]>)=> {
-            // console.log('users', action.payload)
+            
             return {...state, users: action.payload}
         },
         getSingleUser:(state:UserState, action:PayloadAction<User[]>)=> {
@@ -65,7 +65,7 @@ export const deleteUserAsync = (id:number) => async (dispatch:any) => {
 
 export const addUserAsync = (user:User ) => async (dispatch:any) => {
     try {
-        // console.log(user)
+        
         const response = await axios.post(`http://localhost:8080/users`, user)
         console.log(response)
        dispatch(addUser(response.data))

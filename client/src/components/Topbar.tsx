@@ -1,6 +1,6 @@
-//import React,{useContext} from 'react'
+
 import { Box, IconButton} from '@mui/material'
-//import {tokens } from '../../Themes'
+
 import {InputBase} from '@mui/material'
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined'
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined'
@@ -8,19 +8,17 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined'
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined'
 import SearchIcon from '@mui/icons-material/Search'
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../reduxState/Store'
-import toggleBackgroundColor from '../features/toggleSlice'
+
+
+
+import { useState } from 'react'
 
 export const Topbar = () => {
 
-  const backgroundColor = useSelector((state: RootState) => state.themes.backgroundColor);
-  const dispatch = useDispatch();
+  const [toggle, setToggle] = useState(true)
 
 
-  // const handleClick = () => {
-  //   dispatch(toggleBackgroundColor(backgroundColor, 'b') as any);
-  // }
+ 
   const handleNote = ()=>{
     if(window.confirm('You don`t have any notifications')){
       console.log('Ok')
@@ -42,7 +40,7 @@ const handleSettings = ()=>{
       </Box>
       <Box display='flex'>
       <IconButton onClick={()=>{}} >
-        {backgroundColor ? <DarkModeOutlinedIcon/> : <LightModeOutlinedIcon/>}
+        {true ? <DarkModeOutlinedIcon/> : <LightModeOutlinedIcon/>}
       </IconButton>
         <IconButton onClick={handleNote}> <NotificationsOutlinedIcon/></IconButton>
         <IconButton onClick={handleSettings}> <SettingsOutlinedIcon/></IconButton>

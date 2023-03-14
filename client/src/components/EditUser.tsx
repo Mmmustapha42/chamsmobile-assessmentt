@@ -7,7 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import {   updateUserAsync } from "../features/slice";
-import { RootState } from "../reduxState/Store";
+import { RootState } from "../reduxStore/Store";
 
 const Form = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
@@ -19,13 +19,7 @@ const Form = () => {
   const navigate = useNavigate()
   const {users} = useSelector ((state:RootState) =>state.users)
  
-  // useEffect(()=>{
-  //   dispatch(getSingleUserAsync(id) as any)
-  // },[])
-
-  // useEffect(()=>{
-  //   dispatch(getSingleUserAsync(id) as any)
-  // },[])
+  
 
   const handleFormSubmit = (values:any, actions:any) => {
     dispatch(updateUserAsync(values, id)as any)

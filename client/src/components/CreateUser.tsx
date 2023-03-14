@@ -6,7 +6,7 @@ import { Header } from './Header'
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUserAsync } from "../features/slice";
-import { RootState } from "../reduxState/Store";
+import { RootState } from "../reduxStore/Store";
 
 
 const Form = () => {

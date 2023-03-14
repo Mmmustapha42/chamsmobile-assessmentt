@@ -3,7 +3,7 @@ import { Box, Button, ButtonGroup } from '@mui/material'
 import { DataGrid, GridColDef, GridToolbar} from '@mui/x-data-grid';
 import { Header } from './Header'
 import {useDispatch, useSelector} from 'react-redux'
-import { RootState } from '../reduxState/Store';
+import { RootState } from '../reduxStore/Store';
 import { deleteUserAsync, getUsersAsync } from '../features/slice';
 import {useNavigate} from 'react-router-dom'
 
@@ -70,8 +70,6 @@ export const Display = () => {
       dispatch(getUsersAsync() as any)
     }
   }
-  
-
 
   return (
     <Box m='20px'>
