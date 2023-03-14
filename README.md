@@ -21,5 +21,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Getting Started with The Backend.
 The app runs on port 8080, 'http://localhost:8080' to view in the browser.
-All inputs and forms were validated before sending to the frontend using the relevant middlewares and validation.
+All inputs and forms were validated before sending to the frontend using the relevant middlewares and input validation.
 
